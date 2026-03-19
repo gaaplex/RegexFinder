@@ -1,0 +1,25 @@
+version: 2.1
+
+# Usamos node-orb que nos facilita configurar Node.js
+orbs:
+  node: circleci/node@5.1.0
+
+jobs:
+  test:
+    executor:
+      name: node/default
+      tag: '20.0' # Esta versión requiere coincidir más o menos con tus @types/node^20.0.0
+    steps:
+      - checkout
+      # Este comando de orb instala dependencias (npm install) y cachea automáticamente
+      - node/install-packages:
+          pkg-manager: npm
+      # Ejecuta nuestras pruebas configuradas en el package.json
+      - run:
+          name: Ejecutar pruebas unitarias (Jest)
+          command: npm test
+
+workflows:
+  build-and-test-workflow:
+    jobs:
+      - test
