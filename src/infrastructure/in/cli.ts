@@ -1,16 +1,16 @@
-// src/infrastructure/cli/cli.ts
+// src/infrastructure/in/cli.ts
 //
 // INFRAESTRUCTURA — Adaptador de entrada (CLI)
 
 import { SearchNamesUseCase } from '../../application/SearchNamesUseCase';
-import { FileNamesRepository } from '../repositories/FileNamesRepository';
+import { FileNamesRepository } from '../out/FileNamesRepository';
 
 async function main() {
   const pattern = process.argv[2];
 
   if (!pattern) {
-    console.error("Uso: npx ts-node src/infrastructure/cli/cli.ts <expresión_regular>");
-    console.error("Ejemplo: npx ts-node src/infrastructure/cli/cli.ts ^Ana");
+    console.error("Uso: npx ts-node src/infrastructure/in/cli.ts <expresión_regular>");
+    console.error("Ejemplo: npx ts-node src/infrastructure/in/cli.ts ^Ana");
     process.exit(1);
   }
 

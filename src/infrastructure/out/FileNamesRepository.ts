@@ -4,7 +4,7 @@
 
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { NamesRepository } from '../../domain/ports/NamesRepository';
+import { NamesRepository } from '../../domain/ports/out/NamesRepository';
 
 export class FileNamesRepository implements NamesRepository {
   private filePath: string;

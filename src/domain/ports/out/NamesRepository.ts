@@ -1,4 +1,4 @@
-// src/domain/ports/NamesRepository.ts
+// src/domain/ports/out/NamesRepository.ts
 //
 // DOMINIO — Puerto de salida (driven port)
 

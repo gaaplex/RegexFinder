@@ -3,8 +3,8 @@
 // APLICACIÓN — Caso de Uso
 // Aquí vive la lógica de negocio real.
 
-import { SearchService } from '../domain/ports/SearchService';
-import { NamesRepository } from '../domain/ports/NamesRepository';
+import { SearchService } from '../domain/ports/in/SearchService';
+import { NamesRepository } from '../domain/ports/out/NamesRepository';
 import { SearchResult } from '../domain/SearchResult';
 
 export class SearchNamesUseCase implements SearchService {
