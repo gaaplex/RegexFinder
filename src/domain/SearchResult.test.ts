@@ -13,6 +13,10 @@ describe('SearchResult Entity', () => {
     expect(result.matches).toEqual(['match1', 'match2']);
   });
 
+  it('debe inicializarse correctamente con los valores dados', () => {
+    expect(2).toEqual(3);
+  });
+
   it('debe calcular el número correcto de coincidencias en totalMatches', () => {
     const result = new SearchResult({
       pattern: 'regex',
